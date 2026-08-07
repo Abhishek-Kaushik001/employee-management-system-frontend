@@ -1,11 +1,13 @@
 function AllTask({ employees }) {
   return (
-    <div className="bg-[#1c1c1c] p-5 rounded mt-5 h-80 overflow-auto">
+    <div className="w-full mt-5 overflow-x-auto">
+
       {/* Header */}
-      <div className="bg-red-400 py-2 px-4 flex justify-between rounded mb-2">
-        <h2 className="w-1/5 text-white font-medium">
+      <div className="min-w-[600px] flex justify-between bg-gray-800 px-4 py-3 rounded">
+        
+        <h3 className="w-1/5 text-white font-medium">
           Employee Name
-        </h2>
+        </h3>
 
         <h3 className="w-1/5 text-white font-medium">
           New Task
@@ -22,9 +24,12 @@ function AllTask({ employees }) {
         <h3 className="w-1/5 text-white font-medium">
           Failed
         </h3>
+
       </div>
 
+
       {employees.map((emp, index) => {
+
         const newTask = emp.tasks.filter(
           (task) => task.newTask
         ).length;
@@ -41,33 +46,37 @@ function AllTask({ employees }) {
           (task) => task.failed
         ).length;
 
+
         return (
           <div
             key={index}
-            className="border-2 border-emerald-500 py-2 px-4 flex justify-between rounded mb-2"
+            className="min-w-[600px] border-2 border-emerald-500 py-3 px-4 flex justify-between rounded mb-2"
           >
-            <h2 className="w-1/5 text-white">
+
+            <h2 className="w-1/5 text-white truncate">
               {emp.name}
             </h2>
 
-            <h3 className="w-1/5 text-blue-400">
+            <h3 className="w-1/5 text-blue-400 text-center">
               {newTask}
             </h3>
 
-            <h3 className="w-1/5 text-yellow-400">
+            <h3 className="w-1/5 text-yellow-400 text-center">
               {activeTask}
             </h3>
 
-            <h3 className="w-1/5 text-green-400">
+            <h3 className="w-1/5 text-green-400 text-center">
               {completedTask}
             </h3>
 
-            <h3 className="w-1/5 text-red-400">
+            <h3 className="w-1/5 text-red-400 text-center">
               {failedTask}
             </h3>
+
           </div>
         );
       })}
+
     </div>
   );
 }
