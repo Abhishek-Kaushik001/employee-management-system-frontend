@@ -28,38 +28,41 @@ function Login({ setUser, employees }) {
     setPassword("");
   };
 
-  return (
-    <div className="flex h-screen w-screen items-center justify-center bg-[#1c1c1c]">
-      <div className="border-2 border-emerald-600 p-20 rounded-xl">
-        <form
-          onSubmit={submitHandler}
-          className="flex flex-col items-center justify-center"
+ return (
+  <div className="min-h-screen flex items-center justify-center bg-black px-4">
+    <div className="w-full max-w-xs bg-zinc-900 p-5 rounded-xl">
+
+      <form onSubmit={submitHandler} className="flex flex-col">
+
+        <input
+          required
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className="outline-none bg-transparent border-2 border-emerald-600 text-sm py-2 px-4 rounded-full placeholder:text-gray-400 text-white"
+          type="email"
+          placeholder="Enter your email"
+        />
+
+        <input
+          required
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          className="outline-none bg-transparent border-2 border-emerald-600 text-sm py-2 px-4 rounded-full placeholder:text-gray-400 text-white mt-3"
+          type="password"
+          placeholder="Enter your password"
+        />
+
+        <button 
+          className="mt-5 text-white bg-emerald-600 hover:bg-emerald-700 text-sm py-2 px-4 w-full rounded-full"
         >
-          <input
-            required
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="outline-none bg-transparent border-2 border-emerald-600 text-xl py-3 px-5 rounded-full placeholder:text-gray-400 text-white"
-            type="email"
-            placeholder="Enter your email"
-          />
+          Log In
+        </button>
 
-          <input
-            required
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            className="outline-none bg-transparent border-2 border-emerald-600 text-xl py-3 px-5 rounded-full placeholder:text-gray-400 text-white mt-5"
-            type="password"
-            placeholder="Enter your password"
-          />
+      </form>
 
-          <button className="mt-7 text-white border-none outline-none bg-emerald-600 hover:bg-emerald-700 text-xl py-3 px-5 w-full rounded-full">
-            Log In
-          </button>
-        </form>
-      </div>
     </div>
-  );
+  </div>
+);
 }
 
 export default Login;
