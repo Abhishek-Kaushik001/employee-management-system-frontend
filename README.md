@@ -1,16 +1,41 @@
-# React + Vite
+# 🚀 Employee Management System (Frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern Employee Management System built using **React.js**, **Vite**, and **Tailwind CSS**. The application provides separate dashboards for Admin and Employees with task assignment and management features.
 
-Currently, two official plugins are available:
+## 🔗 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+https://employee-management-system-frontend-one-rose.vercel.app
 
-## React Compiler
+## 💻 GitHub Repository
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+https://github.com/Abhishek-Kaushik001/employee-management-system-frontend
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Admin Login
+- Employee Login
+- Create & Assign Tasks
+- Employee Dashboard
+- Task Status Cards
+- LocalStorage Data Management
+- Responsive UI
+
+## 🛠️ Tech Stack
+
+- React.js
+- Vite
+- Tailwind CSS
+- JavaScript (ES6)
+- HTML5
+- CSS3
+
+## ▶️ Run Locally
+
+```bash
+npm install
+npm run dev
+```
+
+## 👨‍💻 Developer
+
+**Abhishek Kaushik**
