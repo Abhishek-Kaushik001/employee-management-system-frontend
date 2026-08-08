@@ -5,38 +5,48 @@ import AdminDashboard from "./components/Dashboard/AdminDashboard";
 import { setLocalStorage, getLocalStorage } from "./utils/localStorage";
 
 function App() {
+
   const [user, setUser] = useState(null);
   const [employees, setEmployees] = useState([]);
 
   useEffect(() => {
+
     setLocalStorage();
 
-    const { employees } = getLocalStorage();
-    setEmployees(employees);
+    const data = getLocalStorage();
+
+    setEmployees(data.employees);
+
   }, []);
+
 
   return (
     <>
       {!user ? (
+
         <Login
           setUser={setUser}
           employees={employees}
         />
+
       ) : user.email === "admin@ems.com" ? (
+
         <AdminDashboard
           user={user}
           setUser={setUser}
           employees={employees}
           setEmployees={setEmployees}
         />
+
       ) : (
+
         <EmployeeDashboard
           user={user}
           setUser={setUser}
-           employees={employees}
+          employees={employees}
           setEmployees={setEmployees}
-
         />
+
       )}
     </>
   );
