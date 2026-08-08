@@ -8,28 +8,24 @@ function TaskListNumber({ user }) {
   return (
     <div className="grid grid-cols-2 gap-4">
 
-      <div className="rounded-xl py-5 px-4 bg-blue-400">
+      <div className="rounded-xl py-6 px-9 bg-blue-400">
         <h2 className="text-3xl font-semibold">{newTask}</h2>
-        <h3 className="text-lg font-medium">New Task</h3>
+        <h3 className="text-xl font-medium">New Task</h3>
       </div>
 
-      <div className="rounded-xl py-5 px-4 bg-yellow-400">
+      <div className="rounded-xl py-6 px-9 bg-yellow-400">
         <h2 className="text-3xl font-semibold">{activeTask}</h2>
-        <h3 className="text-lg font-medium">Active Task</h3>
+        <h3 className="text-xl font-medium">Active Task</h3>
       </div>
 
-      <div className="rounded-xl py-5 px-4 bg-green-400">
+      <div className="rounded-xl py-6 px-9 bg-green-400">
         <h2 className="text-3xl font-semibold">{completedTask}</h2>
-        <h3 className="text-lg font-medium">
-          Completed
-        </h3>
+        <h3 className="text-xl font-medium">Completed</h3>
       </div>
 
-      <div className="rounded-xl py-5 px-4 bg-red-400">
+      <div className="rounded-xl py-6 px-9 bg-red-400">
         <h2 className="text-3xl font-semibold">{failedTask}</h2>
-        <h3 className="text-lg font-medium">
-          Failed Task
-        </h3>
+        <h3 className="text-xl font-medium">Failed Task</h3>
       </div>
 
     </div>

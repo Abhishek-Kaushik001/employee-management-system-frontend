@@ -9,7 +9,7 @@ function AdminDashboard({
   setEmployees,
 }) {
   return (
-    <div className="h-screen w-full p-10 bg-[#1c1c1c]">
+   <div className="min-h-screen w-full p-10 bg-[#1c1c1c]">
       <Header
         user={user}
         setUser={setUser}
